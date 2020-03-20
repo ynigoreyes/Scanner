@@ -1,0 +1,7 @@
+/**
+ * Here is what a normal doc string looks like
+ */
+test for comments
+/**
+ * Here is what a normal doc string looks like
+ */
