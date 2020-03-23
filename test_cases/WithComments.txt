@@ -1,7 +1,10 @@
-/**
- * Here is what a normal doc string looks like
- */
+read
+// Here is a single line comment
 test for comments
 /**
  * Here is what a normal doc string looks like
+ */
+ write
+/**
+ * Here is a sneaky comment at the end
  */
