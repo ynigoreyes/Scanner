@@ -12,8 +12,14 @@ class Scanner:
             cc = content[position]
 
             # If the current letter is a string
-            if any(symbol in cc for symbol in ['(', ')', '+', '-']):
-                tokens.append(cc)
+            if cc == '(':
+                tokens.append('lparen')
+            elif cc == ')':
+                tokens.append('rparen')
+            elif cc == '+':
+                tokens.append('plus')
+            elif cc == '-':
+                tokens.append('minus')
             elif cc.isalpha():
                 finalWord = cc
                 # While the next character is a letter
@@ -90,7 +96,7 @@ class Scanner:
                             position += 1
                     else:
                         readingComment = False
-                        tokens.append(cc)
+                        tokens.append('div')
             # Skip all spaces
             elif cc.isspace():
                 pass

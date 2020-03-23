@@ -52,7 +52,7 @@ class TestScannerFunctionality(unittest.TestCase):
         """
         with open('./test_cases/WithSymbolsAndComments.txt') as f:
             fileContents = f.read()
-            correctTokens = ['/', '+', '-', '+', '(', ')']
+            correctTokens = ['div', 'plus', 'minus', 'plus', 'lparen', 'rparen']
             tokens = Scanner.scan(fileContents)
             self.makeSureArraysAreTheSame(tokens, correctTokens)
     def test_for_no_error_on_all_types_of_numbers(self):
