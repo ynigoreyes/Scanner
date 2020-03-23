@@ -1,5 +1,6 @@
 from BadTokenExpection import BadTokenExpection
 
+
 class Scanner:
     @staticmethod
     def scan(content: str):
@@ -19,7 +20,7 @@ class Scanner:
                 while not Scanner.isAtEndOfString(position, content) and content[position + 1].isalnum():
                     finalWord += content[position + 1]
                     position += 1
-                
+
                 # If the final word is either read or write
                 if any(readOrWrite in finalWord for readOrWrite in ['read', 'write']):
                     tokens.append(finalWord)
@@ -47,7 +48,7 @@ class Scanner:
                         position += 1
                     else:
                         raise BadTokenExpection()
-                
+
                 tokens.append('number')
             # If we see a decimal point
             elif cc == '.':
@@ -106,7 +107,7 @@ class Scanner:
             return False
         else:
             return content[currentPostion + 1] == match
-    
+
     @staticmethod
     def prevCharacterMatches(currentPostion: int, content: str, match):
         if currentPostion == 0:
